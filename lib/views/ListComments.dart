@@ -21,7 +21,7 @@ Commentscontroller controller=Commentscontroller();
 
 class _ListcommentsState extends State<Listcomments> {
 
-  Future<List<Commentsmodel>> getData()async{
+  Future<List<dynamic>> getData()async{
     final resposne=await http.get(Uri.parse("https://jsonplaceholder.typicode.com/comments"));
     if(resposne.statusCode==200){
       print(json.decode(resposne.body));
